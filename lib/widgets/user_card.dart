@@ -20,7 +20,13 @@ class UserCard extends StatelessWidget {
         ),
         width: MediaQuery.of(context).size.width * 0.6,
         decoration: const BoxDecoration(
-          color: Colors.black26,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54,
+              blurStyle: BlurStyle.outer,
+            ),
+          ],
+          color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
         child: Column(
