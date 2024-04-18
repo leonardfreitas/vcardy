@@ -27,7 +27,10 @@ class UserTile extends StatelessWidget {
       subtitle: Text(user.role),
       trailing: IconButton(
         onPressed: () {
-          Navigator.pushNamed(context, AppRoutes.user);
+          Navigator.of(context).pushNamed(
+            AppRoutes.user,
+            arguments: user,
+          );
         },
         icon: const Icon(Icons.link),
       ),

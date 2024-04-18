@@ -11,7 +11,11 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(AppRoutes.user);
+        Navigator.pushNamed(
+          context,
+          AppRoutes.user,
+          arguments: user,
+        );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(

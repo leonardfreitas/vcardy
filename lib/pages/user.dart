@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vcardy/models/user.dart';
 
 class UserPage extends StatefulWidget {
   const UserPage({super.key});
@@ -12,9 +13,11 @@ class _UserPageState extends State<UserPage> {
 
   @override
   Widget build(BuildContext context) {
+    final user = ModalRoute.of(context)!.settings.arguments as User;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Noma do Usuário'),
+        title: Text(user.name),
       ),
       body: Center(
         child: Text(
