@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vcardy/models/user.dart';
+import 'package:vcardy/shared/app_routes.dart';
 
 class UserTile extends StatelessWidget {
   final User user;
@@ -25,7 +26,9 @@ class UserTile extends StatelessWidget {
       title: Text(user.name),
       subtitle: Text(user.role),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, AppRoutes.user);
+        },
         icon: const Icon(Icons.link),
       ),
     );

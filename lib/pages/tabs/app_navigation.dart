@@ -27,7 +27,9 @@ class _AppNavitgationState extends State<AppNavitgation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: tabs[index],
+      body: SafeArea(
+        child: tabs[index],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         onTap: handleTab,
